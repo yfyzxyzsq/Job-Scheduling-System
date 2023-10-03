@@ -1,0 +1,20 @@
+# 配置的是 http 回显程序的镜像
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-deployment1  # 重复调用 create_deployment 创建 name 相同的会起冲突
+spec:
+  replicas: 3 # 设置副本数
+  selector:
+    matchLabels:
+      app: test
+  template:
+    metadata:
+      labels:
+        app: test
+    spec:
+      containers:
+      - name: test
+        image: docker.io/defaultddd/test:v2 # 指定您的Docker镜像
+        ports:
+        - containerPort: 8080 # 指定容器监听的端口
