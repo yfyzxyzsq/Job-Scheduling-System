@@ -1,10 +1,12 @@
 # 导入 sys 模块以接收命令行参数
 import sys
+from scheduler.deployment_create import create_deployment
 
 # 输出帮助信息
 def print_help():
     print("command list:")
     print("register submit a job to the system")
+    print("create deployment")
     print("... help info")
 
 
@@ -12,6 +14,8 @@ def print_help():
 def process_command(command):
     if command == "hello":
         print("Hello, World!")
+    elif command == "create deployment":
+        create_deployment()
     elif command == "bye":
         print("Goodbye, World!")
     elif command == "help":
