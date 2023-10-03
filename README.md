@@ -8,7 +8,7 @@ my_project/
 ├── requirements.txt         # 项目依赖的 Python 包列表
 │
 ├── config/                  # 配置文件目录
-│   ├── config.py            # 项目配置文件
+│   ├── yaml                 # k8s yaml 配置 
 │   └── ...
 │
 ├── data/                    # 数据文件目录
