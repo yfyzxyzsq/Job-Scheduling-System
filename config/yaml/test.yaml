@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: test-deployment1  # 重复调用 create_deployment 创建 name 相同的会起冲突
 spec:
-  replicas: 3 # 设置副本数
+  replicas: 2 # 设置副本数
   selector:
     matchLabels:
       app: test
